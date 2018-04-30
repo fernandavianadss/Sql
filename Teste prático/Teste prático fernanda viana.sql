@@ -109,16 +109,4 @@ insert into Conta_Cliente(id, cod_conta, num_cli, valor, dt_inicio, gerente)
 values(4, 7, 3, 80.00000, '01/02/2000', 1236)
 
 
-select distinct cli.nome from cliente cli, conta_cliente cc, conta c, tipo t where cc.cod_conta = c.codigo and 
-(select c.nome = 'Corrente' and cc.valor > 20000 and cc.dt_inicio > '01/01/1994')
-select f.nome from funcionario f, tipo t, cliente c where t.codigo = f.tipo and t.nome = 'Gerente' and f.sexo = 'M' and not (c.uf = 'SP')
-
-
 alter table Tipo add descricao varchar(30)
-
-
-select distinct * from cliente cli, conta_cliente cc, conta c, funcionario f, tipo t where cc.cod_conta = c.codigo and t.codigo = f.tipo and 
-(select c.nome = 'Corrente' and cc.valor > 10000 and cc.valor <= 90000 and f.nome = 'Asdrubal')
-
-
-
