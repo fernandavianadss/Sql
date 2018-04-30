@@ -1,4 +1,4 @@
-﻿/*create table Cliente(
+create table Cliente(
 numero int, 
 nome varchar(40),
 sobrenome varchar(40),
