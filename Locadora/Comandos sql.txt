@@ -1,0 +1,128 @@
+/*insert into diretor(codigo, nome, sexo, dt_nascimento, dt_falecimento, nacionalidade)
+values (01, 'Joao Barbosa', 'M', '10-12-1980', null, 'Brasileiro')*/
+
+/*insert into diretor(codigo, nome, sexo, dt_nascimento, dt_falecimento, nacionalidade)
+values (02, 'Marina Silva', 'F', '02-03-1975', '27-11-2013', 'Argentina')*/
+
+/*insert into diretor(codigo, nome, sexo, dt_nascimento, dt_falecimento, nacionalidade)
+values (03, 'José da Silva', 'M', '02-03-1971', null, 'Brasileiro')*/
+
+/*insert into ator(codigo, nome, sexo, nacionalidade, dt_nascimento, dt_falecimento)
+values(001, 'Nicole kidman', 'F', 'Americana', '01-09-1969', null)*/
+
+/*insert into ator(codigo, nome, sexo, nacionalidade, dt_nascimento, dt_falecimento)
+values(002, 'José da Silva', 'M', 'Brasileiro', '02-03-1971', null)*/
+
+/*alter table cliente drop sexo*/
+
+/*alter table cliente add sexo char(1) check (sexo in ('F', 'M'))*/
+
+/*insert into cliente(num_identificacao, nome, logradouro, numero, complemento, bairro, cidade, uf, cep, dt_nasc, sexo) 
+values (3, 'Paulo', 'Jundiai', 2, 'casa 06', '25 de agosto', 'Duque de Caxias', 'RJ', '25051070', '12-06-1992', 'M')*/
+
+/*insert into cliente(num_identificacao, nome, logradouro, numero, complemento, bairro, cidade, uf, cep, dt_nasc, sexo) 
+values (7, 'Ana Clara', 'Santa Izabel', 45, 'casa 01', 'Laureano', 'Duque de Caxias', 'RJ', '25051018', '14-09-2012', 'F')*/
+
+/*insert into cliente(num_identificacao, nome, logradouro, numero, complemento, bairro, cidade, uf, cep, dt_nasc, sexo) 
+values (5, 'Ana', 'Gloria', 10, 'casa 05', 'Gramacho', 'Duque de Caxias', 'RJ', '25051060', '14-04-1989', 'F')*/
+
+/*insert into cliente(num_identificacao, nome, logradouro, numero, complemento, bairro, cidade, uf, cep, dt_nasc, sexo) 
+values (9, 'José de Souza', 'Gloria', 10, 'casa 05', 'Estrela', 'Magé', 'RJ', '25051060', '19-12-1992', 'M')*/
+
+/*insert into telefone(codigo, num_identificacaocliente, tipo, numero)
+values (02, 3, 'residencial', 27825424)*/
+
+/*insert into telefone(codigo, num_identificacaocliente, tipo, numero)
+values (03, 5, 'celular', 991473092)*/
+
+/*insert into filme(cod_identficador, titulo, ano_producao)
+values (02, 'Homem Aranha', 2017)*/
+
+/*delete from dvd **/
+
+/*delete from filme **/
+
+/*alter table filme drop ano_producao*/
+
+/*alter table filme add ano_producao date*/
+
+/*insert into filme(cod_identficador, titulo, ano_producao)
+values (10, 'Jogos Vorazes', '13-01-2012')*/
+
+/*insert into direcao(filme_identificador, diretor_codigo)
+values (10, 2)*/
+
+/*insert into direcao(filme_identificador, diretor_codigo)
+values (10, 3)*/
+
+/*insert into dvd(codigo, dt_compra, filme_identificador)
+values (20, '14-07-2012', 10)*/
+
+
+/*insert into filme(cod_identficador, titulo, ano_producao)
+values (11, 'Annabele', '01-05-2013')*/
+
+/*insert into locacao(num_cliente, cod_dvd, data_hora_locacao, data_hora_devolucao)
+values (5, 20, '08-06-2014', '11-06-2014')*/
+
+/*insert into atuacao(filme_identificador, ator_codigo)
+values (10, 2)*/
+
+/*drop table locacao*/
+
+/*create table locacao(
+num_cliente int references Cliente(num_identificacao),
+cod_dvd int references Dvd(codigo),
+data_hora_locacao date null,
+data_hora_devolucao date null, 
+primary key(data_hora_locacao, num_cliente, cod_dvd)
+)
+*/
+
+/*delete from cliente where num_identificacao = 7*/
+
+/*select t.num_identificacaocliente from telefone t,cliente c
+where t.num_identificacaocliente = c.num_identificacao and (t.tipo='residencial' or t.tipo='comercial')*/
+
+ /*select * from dvd where dt_compra > '13/07/12'*/
+
+/*select diretor_codigo from direcao*/
+
+/*select * from cliente where cidade ='Duque de Caxias'*/
+
+/*select * from dvd where dt_compra > '13/07/2012'*/
+
+/*select * from locacao where dt_hora_devolucao is null*/
+
+/*select * from locacao where dt_hora_devolucao is null and dt_hora_locacao > '01/09/2012'*/
+
+/*select * from diretor where dt_falecimento is not null*/
+
+/*select * from ator where sexo ='F'*/
+
+/*select nome from cliente where (dt_nasc = '14-09-2012' and cidade ='Duque de Caxias')*/
+
+/*select nome, logradouro, numero, complemento, bairro, cidade, uf, cep from cliente where (dt_nasc > '31/12/1950')*/
+
+/*select nacionalidade, sexo from diretor where dt_falecimento is null*/
+
+/*select titulo, ano_producao from filme*/
+
+/*select c.nome from cliente c where c.cidade = 'Duque de Caxias' and c.dt_nasc ='14/09/2012'*/
+
+/*select nome, logradouro, numero, complemento bairro, cidade, uf, cep, extract ('year' from dt_nasc) = 1950 from cliente*/
+
+
+/*select t.num_identificacaocliente from telefone t join cliente c on
+ t.num_identificacaocliente = c.num_identificacao where (t.tipo='residencial' or t.tipo='comercial')*/
+
+ /*select nome from cliente where (sexo <> 'F' and dt_nasc = '19-12-1992')*/
+
+ /*select nome, nacionalidade from ator where dt_falecimento is null-*/
+
+ /*select filme.titulo from filme f join atuacao a on a.filme_identificador = f._identificador where(ator.nome ='Nicole Kidman')*/
+
+/*select nome from locacao l join cliente c on l.num_cliente = c.num_identificacao where(data_hora_locacao is null)*/
+
+ /*select cod_dvd from locacao where data_hora_devolucao is null*/
+ 
