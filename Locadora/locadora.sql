@@ -81,10 +81,6 @@ INSERT INTO categoria VALUES ('Aventura');
 INSERT INTO categoria VALUES ('Policial');
 
 
-
-
-
-
 INSERT INTO cliente VALUES (001,'Joana Machado da Silva',99655485,'Rua Zeca Dias,85');
 INSERT INTO cliente VALUES (002,'Pedro Luiz de Almeida',81154679,'Rua Flores da Cunha,356');
 INSERT INTO cliente VALUES (003,'Angela Pinheiro',96457812,'Rua dos Andradas,860');
@@ -95,9 +91,6 @@ INSERT INTO cliente VALUES (007,'Ana Maria Pereira',81454500,'Rua Fatima Fraga,8
 INSERT INTO cliente VALUES (008,'Vanessa Garcia',96458871,'Rua Pinheiro Machado,245');
 INSERT INTO cliente VALUES (009,'Ariane Lamark',81456565,'Rua Roraima de Sousa,981');
 INSERT INTO cliente VALUES (010,'Paulo Bourbon',99877714,'Rua Fernando Ferrari,456');
-
-
-
 
 
 INSERT INTO filmes VALUES (4586,'Um segredo entre nos','Drama');
@@ -116,8 +109,6 @@ INSERT INTO filmes VALUES (6987,'Procurando Nemo','Aventura');
 INSERT INTO filmes VALUES (7701,'Laranja Mecanica','Ficcao cientifica');
 
 
-
-
 INSERT INTO ator VALUES ('Anne Jacqueline Hathaway',1982-12-12,1025);
 INSERT INTO ator VALUES ('Devon Gummersall',1978-10-15-,9820);
 INSERT INTO ator VALUES ('Elisha Cuthbert',1982-11-30,6548);
@@ -125,10 +116,6 @@ INSERT INTO ator VALUES ('Leonardo Medeiros',1964-11-20,1023);
 INSERT INTO ator VALUES ('Malu Mader',1966-09-12,2154);
 INSERT INTO ator VALUES ('Joshua Lee Holloway ',1969-07-20,1458);
 INSERT INTO ator VALUES ('Charles Chaplin',1889-04-16,2548);
-
-
-
-
 
 
 INSERT INTO dvd VALUES (1,005,1546);
