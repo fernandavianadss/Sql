@@ -1,2 +1,2 @@
 # SQL
-Exercicíos de fixação em sql. 
+Exercicíos de fixação em sql
